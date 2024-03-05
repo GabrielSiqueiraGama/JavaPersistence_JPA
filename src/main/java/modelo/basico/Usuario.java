@@ -1,6 +1,8 @@
 package modelo.basico;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -10,6 +12,7 @@ variaveis serão atributos no banco de dados, colocando
 o @Id declara qual será a chave
 */
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String nome;
