@@ -1,39 +1,31 @@
 package teste.basico;
 
-import java.util.Scanner;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import modelo.basico.Usuario;
 
-public class AlterarUsuario {
+public class AlterarUsuarioModo3 {
 
 	public static void main(String[] args) {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("estudo_java");
 		EntityManager em = emf.createEntityManager();
-		Scanner scn = new Scanner(System.in);
 		
 		em.getTransaction().begin();
-		Usuario usuario = em.find(Usuario.class, 2L);
 		
-		System.out.println("Digite o novo nome: ");
-		String novoNome = scn.next();
+		Usuario usuario = em.find(Usuario.class, 3L);
+		usuario.setNome("Romario");
+		em.detach(usuario);
 		
-		System.out.println("Digite o novo email: ");
-		String novoEmail = scn.next();
+		//em.merge(usuario);
 		
-		usuario.setNome(novoNome);
-		usuario.setEmail(novoEmail);
-		
-		em.merge(usuario);
 		em.getTransaction().commit();
 		
 		em.close();
 		emf.close();
-		scn.close();
+
 	}
-	
+
 }

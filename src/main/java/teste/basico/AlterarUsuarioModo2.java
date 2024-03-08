@@ -8,8 +8,8 @@ import javax.persistence.Persistence;
 
 import modelo.basico.Usuario;
 
-public class AlterarUsuario {
-
+public class AlterarUsuarioModo2 {
+	
 	public static void main(String[] args) {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("estudo_java");
@@ -19,21 +19,13 @@ public class AlterarUsuario {
 		em.getTransaction().begin();
 		Usuario usuario = em.find(Usuario.class, 2L);
 		
-		System.out.println("Digite o novo nome: ");
-		String novoNome = scn.next();
+		usuario.setNome("Seninha");
 		
-		System.out.println("Digite o novo email: ");
-		String novoEmail = scn.next();
-		
-		usuario.setNome(novoNome);
-		usuario.setEmail(novoEmail);
-		
-		em.merge(usuario);
+
 		em.getTransaction().commit();
 		
 		em.close();
 		emf.close();
 		scn.close();
 	}
-	
 }
