@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Usuario {/*
+public class Usuario implements Entidade{/*
 No JPA esta classe Usuario serve como uma entidade para o banco de dados, suas
 variaveis serão atributos no banco de dados, colocando
 o @Id declara qual será a chave
