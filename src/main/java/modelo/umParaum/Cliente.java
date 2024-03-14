@@ -1,5 +1,6 @@
 package modelo.umParaum;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +18,7 @@ public class Cliente {
 	private long id;
 	
 	private String name;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "assento_id", unique = true, nullable = false)
 	private Assento assento;
 	
