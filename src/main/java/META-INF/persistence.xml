@@ -7,8 +7,10 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>modelo.basico.Usuario</class>
         <class>modelo.basico.Produto</class>
-         <class>modelo.umParaum.Assento</class>
-          <class>modelo.umParaum.Cliente</class>
+        <class>modelo.umParaum.Assento</class>
+        <class>modelo.umParaum.Cliente</class>
+        <class>modelo.umParamuitos.ItemPedido</class>
+        <class>modelo.umParamuitos.Pedido</class>
         <properties>
             <property name="javax.persistence.jdbc.driver"
                 value="com.mysql.jdbc.Driver"/>
