@@ -11,8 +11,10 @@
         <class>modelo.umParaum.Cliente</class>
         <class>modelo.umParamuitos.ItemPedido</class>
         <class>modelo.umParamuitos.Pedido</class>
-         <class>modelo.muitosPmuitos.Tio</class>
-          <class>modelo.muitosPmuitos.Sobrinho</class>
+        <class>modelo.muitosPmuitos.Tio</class>
+        <class>modelo.muitosPmuitos.Sobrinho</class>
+        <class>modelo.muitosPmuitos.Ator</class>
+        <class>modelo.muitosPmuitos.Filme</class>
         <properties>
             <property name="javax.persistence.jdbc.driver"
                 value="com.mysql.jdbc.Driver"/>
