@@ -24,6 +24,7 @@ public class Tio {
 	public Tio() {}
 	
 	public Tio(String name) {
+		super();
 		this.name = name;
 	}
 
