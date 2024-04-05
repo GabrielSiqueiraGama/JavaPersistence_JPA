@@ -23,7 +23,7 @@ public class Filme {
 	
 	private String nome;
 	
-	private double nota;
+	private Double nota;
 	
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinTable(
@@ -80,7 +80,7 @@ public class Filme {
 		if(ator != null && !getAtores().contains(ator)) {
 			getAtores().add(ator);
 			
-			if(ator.getFilmes().contains(this)) {
+			if(!ator.getFilmes().contains(this)) {
 				ator.getFilmes().add(this);
 			}
 		}
