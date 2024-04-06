@@ -18,6 +18,9 @@
         <class>modelo.muitosPmuitos.Sobrinho</class>
         <class>modelo.muitosPmuitos.Ator</class>
         <class>modelo.muitosPmuitos.Filme</class>
+        <class>modelo.composicao.Endereco</class>
+        <class>modelo.composicao.Fornecedor</class>
+        <class>modelo.composicao.Funcionario</class>
         <properties>
             <property name="javax.persistence.jdbc.driver"
                 value="com.mysql.jdbc.Driver"/>
